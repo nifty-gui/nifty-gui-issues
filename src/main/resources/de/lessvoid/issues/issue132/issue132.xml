@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <useStyles filename="nifty-default-styles.xml" />
+  <useControls filename="nifty-default-controls.xml" />
+
+  <style id="shop-listbox-item-default" base="nifty-label">
+    <attributes color="#000f" width="100%" align="left" textVAlign="center" textHAlign="left" />
+    <interact onClick="listBoxItemClicked()" />
+    <effect>
+      <onCustom customKey="focus" name="colorBar" post="false" color="#be3f" neverStopRendering="true" timeType="infinite" />
+      <onCustom customKey="select" name="colorBar" post="false" color="#444f" neverStopRendering="true" timeType="infinite" />
+      <onCustom customKey="select" name="textColor" post="false" color="#fc0f" neverStopRendering="true" timeType="infinite" />
+      <onHover name="colorBar" color="#1e3f" post="false" neverStopRendering="true" timeType="infinite" inset="1px" />
+      <onClick name="focus" targetElement="#parent#parent" />
+    </effect>
+  </style>
+
+  <controlDefinition name="shopItem" style="shop-listbox-item-default">
+    <panel childLayout="horizontal" width="100%" align="left" id="shopItemPanel">
+      <image id="#icon" width="50px" height="50px" imageMode="normal" />
+      <panel childLayout="vertical" width="300px">
+        <text id="#name" style="base-font" color="#00ffffff" text="Item Name" textHAlign="left" />
+        <text id="#description" style="base-font" color="#00ffffff" text="Description of this Item." wrap="true" width="210px" textHAlign="left" />
+        <text id="#price" style="base-font" color="#00ffffff" text="Price" textHAlign="left" />
+      </panel>
+    </panel>
+  </controlDefinition>
+
+  <screen id="start" controller="de.lessvoid.issues.issue132.IssueScreenController">
+    <layer id="layer" backgroundColor="#008f" childLayout="center">
+      <panel id="panel" height="25%" width="35%" align="center" valign="center" backgroundColor="#f60f" childLayout="center" visibleToMouse="true">
+        <control id="shopBuyList" name="listBox" vertical="off" horizontal="off" selection="Single" viewConverterClass="de.lessvoid.issues.issue132.ShopListViewConverter" displayItems="4">
+          <control name="shopItem" style="nifty-listbox-item" controller="de.lessvoid.nifty.controls.listbox.ListBoxItemController" />
+        </control>
+      </panel>
+    </layer>
+  </screen>
+</nifty>
