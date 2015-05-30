@@ -18,7 +18,7 @@ anything you add in here could be run in the same way.
 
 Examples:
 
-``
+```
 # build
 mvn clean package
 
@@ -27,4 +27,4 @@ mvn exec:java -Dexec.mainClass="de.lessvoid.issues.issue132.Issue132Main"
 
 # run the issue 136 example
 mvn exec:java -Dexec.mainClass="de.lessvoid.issues.issue136.Issue136Main"
-``
+```
