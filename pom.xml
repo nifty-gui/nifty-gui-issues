@@ -1,30 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.lessvoid.issues</groupId>
-  <artifactId>issue-132</artifactId>
+  <artifactId>nifty-issues</artifactId>
   <version>1.0-SNAPSHOT</version>
   <properties>
-    <nifty-version>1.4.1</nifty-version>
-    <jogamp.version>2.1.4</jogamp.version>
+    <nifty-version>1.4.2-SNAPSHOT</nifty-version>
+    <jogamp.version>2.3.2</jogamp.version>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>lessvoid</groupId>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty</artifactId>
       <version>${nifty-version}</version>
     </dependency>
     <dependency>
-      <groupId>lessvoid</groupId>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty-jogl-renderer</artifactId>
       <version>${nifty-version}</version>
     </dependency>
     <dependency>
-      <groupId>lessvoid</groupId>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty-style-black</artifactId>
       <version>${nifty-version}</version>
     </dependency>
     <dependency>
-      <groupId>lessvoid</groupId>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty-default-controls</artifactId>
       <version>${nifty-version}</version>
     </dependency>
@@ -44,12 +44,19 @@
       <version>${jogamp.version}</version>
     </dependency>
     <dependency>
-      <groupId>lessvoid</groupId>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty-pauls-soundsystem</artifactId>
       <version>${nifty-version}</version>
     </dependency>
   </dependencies>
   <repositories>
+    <!-- only needed for snapshot builds starting with 1.4.2-SNAPSHOT -->
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+
+    <!-- still needed for some other dependencies not yet available in central like jglfont -->
     <repository>
       <id>nifty-maven-repo.sourceforge.net</id>
       <url>http://nifty-gui.sourceforge.net/nifty-maven-repo</url>
