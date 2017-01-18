@@ -20,6 +20,11 @@
     </dependency>
     <dependency>
       <groupId>com.github.nifty-gui</groupId>
+      <artifactId>nifty-lwjgl-renderer</artifactId>
+      <version>${nifty-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.nifty-gui</groupId>
       <artifactId>nifty-style-black</artifactId>
       <version>${nifty-version}</version>
     </dependency>
@@ -81,6 +86,8 @@
           <!-- If you use this pom.xml with eclipse m2e plugin you'll need to install the maven natives eclipse plugin from http://code.google.com/p/mavennatives/ to make the error message go away. It's as simple as installing it using the following 
             update site: http://mavennatives.googlecode.com/svn/eclipse-update/. This plugin detects if you have the maven plugin configured, and if you do it executes the unpacking of natives, and configures the Native Library Location. This will allow 
             you to run the examples from within eclipse without any more setup of LWJGL required! Just execute the individual examples like any other Java application from eclipse. Done! :) -->
+          <!-- As of 1/18/17, the software site listed above is dead. Use the following bintray site as an alternative until dedicated hosted is available for nifty:
+          	   https://dl.bintray.com/fmarot/com.teamtter.mavennatives.m2eclipse.natives.site/ -->
           <execution>
             <id>unpacknatives</id>
             <phase>generate-resources</phase>

@@ -1,4 +1,4 @@
-package control;
+package de.lessvoid.issues.issue417;
 
 import static org.lwjgl.opengl.GL11.glBlendFunc;
 import static org.lwjgl.opengl.GL11.glClear;
