@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+<useStyles filename="nifty-default-styles.xml" />
+<useControls filename="nifty-default-controls.xml" />
+<screen id="overlay" controller="de.lessvoid.issues.issue435.CoreGameStateGUIController">
+
+<layer id="charLayer" childLayout="center">
+
+<panel width="30%" height="5%" focusable="false" visibleToMouse="true" align="center" valign="bottom" childLayout="horizontal" paddingLeft="10px" paddingRight="10px" backgroundColor="#000a" >
+<control name="button" label="C" id="charButton" focusable="false" align="center" width="25px" height="15px" valign="center" visibleToMouse="true"> 
+<interact onClick="C()"/>
+</control>
+</panel>
+</layer>
+
+
+</screen>
+
+<popup id="charBox" controller="de.lessvoid.issues.issue435.CoreGameStateCharboxController" childLayout="center" >
+<panel width="90%" height="60%" focusable="false" align="center" valign="center" visibleToMouse="true" childLayout="vertical" backgroundColor="#000a">
+	<panel width="2%" height="5%" focusable="false" align="right" valign="top" visibleToMouse="true" childLayout="horizontal">
+		<control name="button" label="X" id="closeButton" focusable="false" align="center" width="15px" height="15px" valign="top" visibleToMouse="true"> 
+		<interact onClick="close()"/>
+		</control>
+	</panel>
+	<panel width="100%" height="95%" focusable="false" align="left" valign="top" visibleToMouse="true" childLayout="horizontal" backgroundColor="#000a">
+<panel width="50%" height="100%" focusable="false" align="left" valign="top" visibleToMouse="true" childLayout="vertical" backgroundColor="#000a">
+		<panel width="100%" height="60%" focusable="false" align="left" valign="top" visibleToMouse="true" childLayout="horizontal">
+		 <effect>
+   			 <onActive name="border" border="1px,1px,1px,1px" color="#fffa,#fffa,#fffa#fffa" timeType="infinite"/>
+ 		  </effect>
+		</panel>	
+		<panel  id="statsPanel" width="100%" height="40%" focusable="false" align="left" valign="top" visibleToMouse="true" childLayout="horizontal">
+		  <effect>
+   			 <onActive name="border" border="1px,1px,1px,1px" color="#fffa,#fffa,#fffa#fffa" timeType="infinite"/>
+ 		  </effect>
+			<panel  id="statsDescription" width="30%" height="100%" focusable="false" align="left" valign="bottom" visibleToMouse="true" childLayout="vertical">
+			</panel>
+			<panel  id="statsValues" width="30%" height="100%" focusable="false" align="left" valign="bottom" visibleToMouse="true" childLayout="vertical">
+			</panel>
+			<panel  id="statsDescriptionRight" width="30%" height="100%" focusable="false" align="left" valign="bottom" visibleToMouse="true" childLayout="vertical">
+			</panel>
+			<panel  id="statsValuesRight" width="30%" height="100%" focusable="false" align="left" valign="bottom" visibleToMouse="true" childLayout="vertical">
+			</panel>
+		</panel>
+</panel>
+		<panel  id="inventoryPanel" width="50%" height="100%"  focusable="false" align="right" valign="top" visibleToMouse="true" childLayout="vertical" visible="true">
+		<effect>
+   			 <onActive name="border" border="0px,0px,0px,1px" color="#fffa,#fffa,#fffa#fffa" timeType="infinite"/>
+ 		  </effect>
+			<control id="inventoryScrollPanel" name="scrollPanel"  horizontal="true" widht="100%" height="100%" childLayout="vertical"  >
+					<panel id="myScrollStuff" width="100%" height="500px" childLayout="vertical" backgroundColor="#000">	
+					
+					<panel id="WhyAreYouNotShown" width="32px" height="32px" childLayout="vertical" backgroundColor="#fff">		
+					</panel>
+					
+					<image filename="de/lessvoid/issues/issue435/items.png"  ImageMode="sprite:32,32,6" /> 	
+					<control name="label" color="#ff0a" id="ShouldBeShown" wrap="true" text="test_via_xml" height="100%" width="100%" align="center" valign="center"/>
+					</panel>
+	
+			</control>
+		</panel>
+	</panel>	
+			</panel>
+
+</popup>
+
+
+
+</nifty>
