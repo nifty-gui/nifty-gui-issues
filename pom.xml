@@ -4,7 +4,7 @@
   <artifactId>nifty-issues</artifactId>
   <version>1.0-SNAPSHOT</version>
   <properties>
-    <nifty-version>1.4.2-SNAPSHOT</nifty-version>
+    <nifty-version>1.4.3-SNAPSHOT</nifty-version>
     <jogamp.version>2.3.2</jogamp.version>
   </properties>
   <dependencies>
