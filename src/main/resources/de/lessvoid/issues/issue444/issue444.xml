@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+    <useStyles filename="nifty-default-styles.xml"/>
+    <useControls filename="nifty-default-controls.xml"/>
+    <screen id="start" controller="de.lessvoid.issues.issue444.Issue444Main">
+        <layer id="windowsLayer" childLayout="absolute">
+            <control name="button" id="showWindowButton" label="Show window" x="200" y="100">
+                <interact onRelease="showWindow()"/>
+            </control>
+            <control name="window" id="window"
+                     hideOnClose="true"
+                     height="90px" width="90px" x="20" y="20">
+                <panel childLayout="vertical">
+                    <control name="radioButtonGroup" id="group"/>
+                    <control name="radioButton" id="default" group="group"/>
+                    <control name="radioButton" id="bottom" group="group"/>
+                </panel>
+            </control>
+        </layer>
+    </screen>
+</nifty>
