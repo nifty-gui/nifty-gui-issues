@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+	<useStyles filename="nifty-default-styles.xml" />
+	<useControls filename="nifty-default-controls.xml "/>
+	<screen id="start" controller="de.lessvoid.issues.issue449.Issue449Main2b">
+		<layer id="layer" childLayout="vertical" backgroundColor="#999f">
+			<control name="scrollPanel" width="400" height="400">
+				<panel id="cpanel" childLayout="vertical" backgroundColor="#0f0f" />
+			</control>
+		</layer>
+	</screen>
+</nifty>
