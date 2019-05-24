@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls xmlns="http://nifty-gui.lessvoid.com/nifty-gui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.lessvoid.com/nifty-gui ../nifty.xsd">
+    <controlDefinition name="treeMenu" childRootId="#content">
+       <panel childLayout="horizontal">
+           <panel childLayout="center">
+               <control name="label" text="$caption"/>
+           </panel>
+           <panel id="#content" childLayout="vertical"/>
+       </panel>
+    </controlDefinition>
+</nifty-controls>
